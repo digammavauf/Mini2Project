@@ -92,64 +92,82 @@
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" id="tabSchedule" data-bs-toggle="tab" href="#shedule-selection" aria-selected="false" role="tab" tabindex="-1">Schedule</a>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="tabPayment" data-bs-toggle="tab" href="#payment-selection" aria-selected="false" role="tab" tabindex="-1">Payment</a>
+                    </li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active show" id="service-selection" role="tabpanel">
                         <form>
                             <fieldset class="form-group">
-                                    <legend class="mt-4">Select a service you want to avail</legend>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions1" value="option1">
-                                    <label class="form-check-label" for="serviceOptions1">
-                                        Psychiatry Initial Session (&#x20B1; 2489)
+                                <legend class="mt-4">Select a service you want to avail</legend>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions1" value="option1">
+                                <label class="form-check-label" for="serviceOptions1">
+                                    Psychiatry Initial Session (&#x20B1; 2489)
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions2" value="option2" disabled>
+                                <label class="form-check-label" for="serviceOptions2">
+                                    Psychiatry Follow Up Session (&#x20B1; 2489) [Fully booked]
+                                </label>
+                                </div>
+                                <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions3" value="option3">
+                                <label class="form-check-label" for="serviceOptions3">
+                                    Psychology Initial Session  (&#x20B1; 2449)
+                                </label>
+                                </div>
+                                <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions4" value="option4" disabled>
+                                <label class="form-check-label" for="serviceOptions4">
+                                    Psychology Follow Up Session  (&#x20B1; 1989) [Fully booked]
+                                </label>
+                                </div>
+                                <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions5" value="option5">
+                                <label class="form-check-label" for="serviceOptions5">
+                                    Psychology Follow Up Session  (&#x20B1; 8989)
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions6" value="option6">
+                                    <label class="form-check-label" for="serviceOptions6">
+                                        Couples Counseling Followup Session (&#x20B1; 2989)
                                     </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions2" value="option2" disabled>
-                                    <label class="form-check-label" for="serviceOptions2">
-                                        Psychiatry Follow Up Session (&#x20B1; 2489) [Fully booked]
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions7" value="option7">
+                                    <label class="form-check-label" for="serviceOptions7">
+                                        Couples Counseling Initial Session (&#x20B1; 8989)
                                     </label>
-                                    </div>
-                                    <div class="form-check disabled">
-                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions3" value="option3">
-                                    <label class="form-check-label" for="serviceOptions3">
-                                        Psychology Initial Session  (&#x20B1; 2449)
-                                    </label>
-                                    </div>
-                                    <div class="form-check disabled">
-                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions4" value="option4" disabled>
-                                    <label class="form-check-label" for="serviceOptions4">
-                                        Psychology Follow Up Session  (&#x20B1; 1989) [Fully booked]
-                                    </label>
-                                    </div>
-                                    <div class="form-check disabled">
-                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions5" value="option5">
-                                    <label class="form-check-label" for="serviceOptions5">
-                                        Psychology Follow Up Session  (&#x20B1; 8989)
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions6" value="option6">
-                                        <label class="form-check-label" for="serviceOptions6">
-                                            Couples Counseling Followup Session (&#x20B1; 2989)
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions7" value="option7">
-                                        <label class="form-check-label" for="serviceOptions7">
-                                            Couples Counseling Initial Session (&#x20B1; 8989)
-                                        </label>
-                                    </div>
+                                </div>
                             </fieldset>
                             <div class="form-group">
                                 <label for="concern" class="form-label mt-4">Describe your concern (optional)</label>
                                 <textarea class="form-control" id="concern" rows="3"></textarea>
                             </div>
-                            <button type="button" class="btn btn-info" id="next-schedule">Next[Schedule]</button>
+                            <button type="button" class="btn btn-info" id="next-schedule">Continue with Schedule</button>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="shedule-selection" role="tabpanel">
-                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                        <form>
+                            <fieldset class="form-group">
+                                <legend class="mt-4">Select a schedule you prefer</legend>
+                            </fieldset>
+                            <button type="button" class="btn btn-warning" id="prev-service">Back to Services</button>
+                            <button type="button" class="btn btn-info" id="next-payment">Continue with Payment</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="payment-selection" role="tabpanel">
+                        <form>
+                            <fieldset class="form-group">
+                                <legend class="mt-4">Select a payment method</legend>
+                            </fieldset>
+                            <button type="button" class="btn btn-warning" id="prev-schedule">Back to Schedule</button>
+                            <button type="button" class="btn btn-info" id="next-booking">Finalize Booking</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -230,9 +248,34 @@
             sessionStorage.setItem("concern", concern);
             let tabSchedule = document.getElementById("tabSchedule");
             let clickEvent = new Event("click");
-            tabSchedule.dispatchEvent(clickEvent);
-        
+            tabSchedule.dispatchEvent(clickEvent);        
         });
+
+        document.getElementById("prev-service").addEventListener("click", function(event) {
+            let tabService = document.getElementById("tabService");
+            let clickEvent = new Event("click");
+            tabService.dispatchEvent(clickEvent);
+        });
+
+        document.getElementById("next-payment").addEventListener("click", function(event) {
+            let tabPayment = document.getElementById("tabPayment");
+            let clickEvent = new Event("click");
+            tabPayment.dispatchEvent(clickEvent);
+        });
+
+        document.getElementById("prev-schedule").addEventListener("click", function(event) {
+            let tabPayment = document.getElementById("tabSchedule");
+            let clickEvent = new Event("click");
+            tabPayment.dispatchEvent(clickEvent);
+        });
+        
+        document.getElementById("next-booking").addEventListener("click", function(event) {
+            alert("Your prefered service schedule has been booked successfuly.\n\nAn email will be sent to you for further details.");
+            let tabService = document.getElementById("tabService");
+            let clickEvent = new Event("click");
+            tabService.dispatchEvent(clickEvent);
+        });
+
     </script>
     <script>var typed = new Typed('#typed', { stringsElement: '#typed-strings', smartBackspace: true, cursorChar: '_', loop: true, backDelay: 4000 });</script>
 </html>

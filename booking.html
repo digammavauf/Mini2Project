@@ -87,10 +87,10 @@
             <div class="col-10">
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" data-bs-toggle="tab" href="#service-selection" aria-selected="true" role="tab">Service</a>
+                        <a class="nav-link active" id="tabService" data-bs-toggle="tab" href="#service-selection" aria-selected="true" role="tab">Service</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" data-bs-toggle="tab" href="#shedule-selection" aria-selected="false" role="tab" tabindex="-1">Schedule</a>
+                        <a class="nav-link" id="tabSchedule" data-bs-toggle="tab" href="#shedule-selection" aria-selected="false" role="tab" tabindex="-1">Schedule</a>
                     </li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
@@ -99,53 +99,53 @@
                             <fieldset class="form-group">
                                     <legend class="mt-4">Select a service you want to avail</legend>
                                     <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                                    <label class="form-check-label" for="optionsRadios1">
+                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions1" value="option1">
+                                    <label class="form-check-label" for="serviceOptions1">
                                         Psychiatry Initial Session (&#x20B1; 2489)
                                     </label>
                                     </div>
                                     <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2" disabled>
-                                    <label class="form-check-label" for="optionsRadios2">
+                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions2" value="option2" disabled>
+                                    <label class="form-check-label" for="serviceOptions2">
                                         Psychiatry Follow Up Session (&#x20B1; 2489) [Fully booked]
                                     </label>
                                     </div>
                                     <div class="form-check disabled">
-                                    <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                    <label class="form-check-label" for="optionsRadios3">
+                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions3" value="option3">
+                                    <label class="form-check-label" for="serviceOptions3">
                                         Psychology Initial Session  (&#x20B1; 2449)
                                     </label>
                                     </div>
                                     <div class="form-check disabled">
-                                    <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-                                    <label class="form-check-label" for="optionsRadios3">
+                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions4" value="option4" disabled>
+                                    <label class="form-check-label" for="serviceOptions4">
                                         Psychology Follow Up Session  (&#x20B1; 1989) [Fully booked]
                                     </label>
                                     </div>
                                     <div class="form-check disabled">
-                                    <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                    <label class="form-check-label" for="optionsRadios3">
+                                    <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions5" value="option5">
+                                    <label class="form-check-label" for="serviceOptions5">
                                         Psychology Follow Up Session  (&#x20B1; 8989)
                                     </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                        <label class="form-check-label" for="optionsRadios2">
+                                        <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions6" value="option6">
+                                        <label class="form-check-label" for="serviceOptions6">
                                             Couples Counseling Followup Session (&#x20B1; 2989)
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                        <label class="form-check-label" for="optionsRadios1">
+                                        <input class="form-check-input" type="radio" name="serviceOptions" id="serviceOptions7" value="option7">
+                                        <label class="form-check-label" for="serviceOptions7">
                                             Couples Counseling Initial Session (&#x20B1; 8989)
                                         </label>
                                     </div>
                             </fieldset>
                             <div class="form-group">
-                                <label for="exampleTextarea" class="form-label mt-4">Describe your problem (optional)</label>
-                                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                                <label for="concern" class="form-label mt-4">Describe your concern (optional)</label>
+                                <textarea class="form-control" id="concern" rows="3"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-info">Next</button>
+                            <button type="button" class="btn btn-info" id="next-schedule">Next[Schedule]</button>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="shedule-selection" role="tabpanel">
@@ -170,12 +170,12 @@
                     <div class="text-center text-lg-left mx-2">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="index.html">Home
-                                    <span class="visually-hidden">(current)</span>
-                                </a>
+                                <a class="nav-link" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html">Services</a>
+                                <a class="nav-link active" href="services.html">Services
+                                    <span class="visually-hidden">(current)</span>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="about.html">About Us</a>
@@ -214,6 +214,25 @@
             document.getElementById("nav").classList.add("bg-dark", "transition-out");
           }
         }
+
+        document.getElementById("next-schedule").addEventListener("click", function(event) {
+            let serviceOptions = document.getElementsByName("serviceOptions");
+            let service;
+            for(let serviceOption of serviceOptions) {
+                if(serviceOption.checked) {
+                    service = serviceOption.nextElementSibling.innerText;
+                }
+            }
+            if(service ==null || service == "") return alert("Please select a service.");
+            let concern = document.getElementById("concern").value;
+            if(concern == "") if(!confirm("You are about to continue with an empty conern. Cancel to fillout or OK to continue.")) return;
+            sessionStorage.setItem("service", service);
+            sessionStorage.setItem("concern", concern);
+            let tabSchedule = document.getElementById("tabSchedule");
+            let clickEvent = new Event("click");
+            tabSchedule.dispatchEvent(clickEvent);
+        
+        });
     </script>
     <script>var typed = new Typed('#typed', { stringsElement: '#typed-strings', smartBackspace: true, cursorChar: '_', loop: true, backDelay: 4000 });</script>
 </html>
